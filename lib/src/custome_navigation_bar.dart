@@ -188,7 +188,7 @@ class _CustomNavigationBarState extends State<CustomNavigationBar>
   void _startAnimation(int index) {
     _controller = AnimationController(
       vsync: this,
-      duration: Duration(milliseconds: 300),
+      duration: Duration(milliseconds: 200),
     );
     CurvedAnimation _curvedAnimation = CurvedAnimation(
       parent: _controller!,
@@ -206,7 +206,7 @@ class _CustomNavigationBarState extends State<CustomNavigationBar>
   void _startScale(int index) {
     _scaleController = AnimationController(
       vsync: this,
-      duration: Duration(milliseconds: 400),
+      duration: Duration(milliseconds: 200),
     )..addStatusListener((status) {
         if (status == AnimationStatus.completed) {
           _scaleController?.reverse();
