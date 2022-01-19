@@ -194,7 +194,7 @@ class _CustomNavigationBarState extends State<CustomNavigationBar>
       parent: _controller!,
       curve: widget.bubbleCurve,
     );
-    Tween<double>(begin: 0.0, end: 0.5).animate(_curvedAnimation)
+    Tween<double>(begin: 0.0, end: 0.3).animate(_curvedAnimation)
       ..addListener(() {
         setState(() {
           _radiuses[index] = _maxRadius! * _curvedAnimation.value;
@@ -218,7 +218,7 @@ class _CustomNavigationBarState extends State<CustomNavigationBar>
       reverseCurve: widget.scaleCurve.flipped,
     );
 
-    Tween<double>(begin: 0.0, end: 0.5).animate(_scaleAnimation)
+    Tween<double>(begin: 0.0, end: 0.3).animate(_scaleAnimation)
       ..addListener(() {
         setState(() {
           _sizes[index] = _scaleAnimation.value * widget.scaleFactor;
